@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jaisurya s</title>
+   <style>
+    body{
+      background-image: url("https://clipground.com/images/png-clipart-download-7.png") ;
+      background-repeat: no-repeat;
+      background-size:cover ;
+    }
+    .head{
+      background-color: rgb(206, 198, 198);
+      border-radius: 10px;
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+    }
+    .head a{
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      padding: 10px 10px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.5em;
+    }
+    a:hover{
+      background-color: rgba(147, 241, 224, 0.545);
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+    .login a{
+      font-size: 15px;
+    }
+    .menu{
+      position: relative;
+      align-items: center;
+      padding: 10px;
+    }
+    .form2{
+      
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      position: relative;
+      margin-left: 400px;
+      background-color: rgb(236, 234, 238);
+      border-radius: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.3em;
+      width: 400px;
+      height: 550px;
+      padding: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+      opacity: 0.95;
+    }
+    .form2::before{
+      content: '';
+     position: absolute;
+     top: -250px;
+     left: 50%;
+     width: 400px;
+      height: 500px;
+     background-color: rgb(229, 92, 253);
+     transform-origin: bottom left;
+     animation: animate 6s linear infinite;
+    }
+    .form2::after{
+     content: '';
+     position: absolute;
+     top: -250px;
+     left: 50%;
+    width: 400px;
+      height: 500px;
+     background-color: rgb(241, 176, 46);
+    transform-origin: bottom left;
+    animation: animate 6s linear infinite;
+   animation-delay: -3s;
+   }
+  @keyframes animate{
+   0%{transform: rotate(0deg);}
+   100%{transform: rotate(360deg);}
+  }
+  .form{
+    position: absolute;
+    inset: 5px;
+    background-color: rgb(155, 151, 156);
+    border-radius: 20px;
+    z-index: 10;
+
+  }  
+    input{
+      margin-top: 5px;
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+      font-size:1em;
+      outline: none;
+    }
+    .login{
+      position: absolute;
+      left: 50px;
+      
+    }
+    .btn{
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 40px;
+      background-color: rgba(111, 0, 255, 0.534);
+      border-radius: 5px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1em;
+    }
+    .signup{
+      position: absolute;
+    
+      left:500px;
+    }
+    .logo{
+      display: flex;
+      width:auto; 
+    }
+    .btnbox {
+      inset: 10px;
+      width: 180px;
+      margin: 35px auto;
+      position: relative;
+      box-shadow: 0 0 10px 1px;
+      border-radius: 30px;
+      justify-content:center;
+    }
+
+    .toggle-btn{
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: transparent; 
+      border: 0;
+      outline: none;
+      position: relative;
+      justify-content: space-evenly;
+     }
+     #btn{
+      top:0;
+      left:0;
+      position: absolute;
+      width: 90px;
+      height: 100%;
+      background: linear-gradient(to right,#ff105f,#ffad06);
+      border-radius: 30px;
+      transition: 0.5s;
+     }
+     .form1{
+      display: flex;
+     }
+     .forget{
+      display: flex;
+      font-size: 0.5em;
+      position: relative;
+      padding: 1px;
+      justify-content: space-between;
+     }
+     .check{
+      font-size:5px;
+     }
+    
+ </style>
+   
+  </head>
+  <body>
+    <header class="head">
+      <div class="logo">
+        <img src="a.png" width="50px" height="50px">
+        <h2 style="font-size: 2em;">AWM Travel</h2></div>
+      <div class="menu">
+        <a href="#" >Home</a>
+        <a href="#" >Contact</a>
+        <a href="#" >About</a>
+        <a href="#" >Review</a>
+        <a onclick="jai1()" >Signup</a>
+      </div>
+      
+    </header>
+  <div class="form2" id="form2" hidden>
+  <div class="form">
+    <div class="btnbox">
+      <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Login</button>
+        <button type="button" class="toggle-btn" onclick="signup()">Signup</button>
+    </div>
+  
+  <div class="form1">
+    
+    <div class="login" id="login">
+    <form action="C:/Users/Dell/OneDrive/Desktop/FRONTEND/TravelAgencyProject/indexpage.html">
+      <label for="uname">Username</label><br>
+      <input type="text" placeholder="Username"><br>
+      <label for="Password">Password</label><br>
+      <input type="password" placeholder="password"><br>
+      <div class="forget">
+        <h4>Remember me</h4>
+        <h4><input type="checkbox" class="check"></h4>
+        <a href="">Forget Password?</a>
+      </div>
+      <label for="captcha" >Captcha</label><br>
+      <input type="text" >
+      <button onclick="document.location=('')" class="btn">Login</button>
+    </form>
+  </div>
+    <div class="signup" id="signup">
+    <form action="">
+      <label for="uname">Username</label><br>
+      <input type="text" placeholder="Username"><br>
+      <label for="emailid">E-Mail Id</label><br>
+      <input type="email" placeholder="xyz@gmail.com"><br>
+      <label for="Password">Password</label><br>
+      <input type="password" placeholder="password"><br>
+      <label for="Password">Re-enter Password</label><br>
+      <input type="password" placeholder="Re-enter password"><br>
+      <label for="mobileno">mobile No</label><br>
+      <input type="text" placeholder="+91 1234567890" pattern="+91 1234567890"><br>
+      <label for="captcha" >Captcha</label><br>
+      <input type="text" ><br><br>
+      <button onclick="document.location=('')" class="btn">Signup</button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+</div> 
+<script>
+  var x = document.getElementById("login");
+  var y = document.getElementById("signup");
+  var z = document.getElementById("btn");
+
+  function signup(){
+    x.style.left="-450px";
+    y.style.left="50px";
+    z.style.left="90px";
+  }
+  function login(){
+    x.style.left="50px";
+    y.style.left="500px";
+    z.style.left="0px";
+  }
+  function jai1(){
+    window.alert("hi client");
+    document.getElementById("form2").style.display="block";
+  }
+</script>
+  </body>
+</html>
