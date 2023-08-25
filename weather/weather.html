@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>weather</title>
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body  {
+    background-color: black;
+
+}
+.card{
+    border-radius: 20px;
+    width: 90%;
+    max-width:470px ;
+    margin: 100px auto 0;
+    padding: 30px;
+    background: linear-gradient(135deg,rgba(183, 247, 253, 0.725),rgb(50, 247, 244));
+    text-align: center;
+}
+.card input{
+    text-align: center;
+    width: 300px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    font-size: 1em;
+
+}
+.search{
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    padding: 30px;
+   
+}
+.searchicon{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    outline: 0px;
+    background-color: azure;
+    border-radius: 50%;
+}
+.search img{
+    width:16px;
+    height: 16px;
+}
+.atmos{
+    display: flex;
+    justify-content: space-between;
+}
+.weathericon img{
+    width: 100px;
+    height: 100px;
+
+}
+.humidity img{
+    width: 70px;
+    height:70px;
+}
+.wind img{
+    width: 70px;
+    height:70px;
+}
+p{
+    font-size: 1.3em;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="Search" spellcheck="false">
+                <button class="searchicon">
+                    <img src="search.png">
+                </button>
+            </div>
+            
+            <div class="weathericon">
+                <img src="clouds.png" class="weatherpng">
+                <p class="report" style="text-transform: capitalize;" >cloud</p>
+                <h1 class="city" style="text-transform:capitalize;">bengalore</h1>
+                <p class="temp">26 °C</p>
+            </div>
+            <div class="atmos" >
+            <div class="humidity" style="display: flex;place-items: center;">
+                <img src="humidity.png">
+                <div >
+                <P class="humidityvalue">26% </P>
+                <p>Humidity</p>
+            </div>
+            </div>
+            <div class="wind" style="display: flex;place-items: center;">
+                <img src="wind.png">
+                <div >
+                <P class="wind-speed">20 km/hr</P>
+                <p>Wind Speed</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            const apikey ="f840c8499f1776577fc677402c1fa193";
+            const apiurl ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+            
+            const searchbox = document.querySelector(".search input");
+            const searchbtn = document.querySelector(".search button");
+            const weatherIcon = document.querySelector(".weatherpng");
+
+            async function checkweather(city){
+                const response=await fetch(apiurl+city+`&appid=${apikey}`);
+                var data = await response.json();
+
+                console.log(data);
+
+                document.querySelector(".city").innerHTML = data.name;
+                document.querySelector(".temp").innerHTML = data.main.temp+"°C";
+                document.querySelector(".humidityvalue").innerHTML = data.main.humidity+"%";
+                document.querySelector(".wind-speed").innerHTML = data.wind.speed +"km/hr";
+                document.querySelector(".report").innerHTML = data.weather[0].main;
+            
+
+                if(data.weather[0].main == "Clouds"){
+                    weatherIcon.src = "clouds.png";
+                }
+                else if(data.weather[0].main == "Haze"){
+                    weatherIcon.src = "haze.png";
+                }
+                else if(data.weather[0].main == "drizzle"){
+                    weatherIcon.src = "drizzle.png";
+                }
+                else if(data.weather[0].main == "Mist"){
+                    weatherIcon.src = "Mist.png";
+                }
+                else if(data.weather[0].main == "Rain"){
+                    weatherIcon.src = "rain.png";
+                }
+                else if(data.weather[0].main == "Clear"){
+                    weatherIcon.src = "clear.png";
+                }          
+              }   
+            
+            searchbtn.addEventListener("click",()=>{
+                checkweather(searchbox.value);
+            })
+            
+
+        </script>
+    </body>
+   
+</html>
