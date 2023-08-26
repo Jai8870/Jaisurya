@@ -79,26 +79,26 @@ p{
             <div class="search">
                 <input type="text" placeholder="Search" spellcheck="false">
                 <button class="searchicon">
-                    <img src="search.png">
+                    <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png">
                 </button>
             </div>
             
             <div class="weathericon">
-                <img src="clouds.png" class="weatherpng">
+                <img src="https://cdn1.iconfinder.com/data/icons/weather-flat-25/64/Sunrise-64.png" class="weatherpng">
                 <p class="report" style="text-transform: capitalize;" >cloud</p>
                 <h1 class="city" style="text-transform:capitalize;">bengalore</h1>
                 <p class="temp">26 °C</p>
             </div>
             <div class="atmos" >
             <div class="humidity" style="display: flex;place-items: center;">
-                <img src="humidity.png">
+                <img src="https://cdn3.iconfinder.com/data/icons/weather-forecast-flat-2/2010/Flat-28-64.png">
                 <div >
                 <P class="humidityvalue">26% </P>
                 <p>Humidity</p>
             </div>
             </div>
             <div class="wind" style="display: flex;place-items: center;">
-                <img src="wind.png">
+                <img src="https://cdn2.iconfinder.com/data/icons/weather-and-forecast-free/32/Weather_Weather_Forecast_Wind_Blowing_Climate-64.png">
                 <div >
                 <P class="wind-speed">20 km/hr</P>
                 <p>Wind Speed</p>
@@ -128,22 +128,22 @@ p{
             
 
                 if(data.weather[0].main == "Clouds"){
-                    weatherIcon.src = "clouds.png";
+                    weatherIcon.src = "https://cdn1.iconfinder.com/data/icons/weather-flat-25/64/Cloudy-64.png";
                 }
                 else if(data.weather[0].main == "Haze"){
-                    weatherIcon.src = "haze.png";
+                    weatherIcon.src = "https://cdn2.iconfinder.com/data/icons/weather-and-forecast-free/32/Weather_Weather_Forecast_Sunny_Sun_Cloudy-64.png";
                 }
                 else if(data.weather[0].main == "drizzle"){
-                    weatherIcon.src = "drizzle.png";
+                    weatherIcon.src = "https://cdn2.iconfinder.com/data/icons/weather-and-forecast-free/32/Weather_Weather_Forecast_Hot_Sun_Day-64.png";
                 }
                 else if(data.weather[0].main == "Mist"){
-                    weatherIcon.src = "Mist.png";
+                    weatherIcon.src = "https://cdn2.iconfinder.com/data/icons/weather-1043/70/Untitled-6-39-64.png";
                 }
                 else if(data.weather[0].main == "Rain"){
-                    weatherIcon.src = "rain.png";
+                    weatherIcon.src = "https://cdn3.iconfinder.com/data/icons/weather-forecast-flat-2/2010/Flat-06-64.png";
                 }
                 else if(data.weather[0].main == "Clear"){
-                    weatherIcon.src = "clear.png";
+                    weatherIcon.src = "https://cdn3.iconfinder.com/data/icons/weather-575/64/Sun-64.png";
                 }          
               }   
             
