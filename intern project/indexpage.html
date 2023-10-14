@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salem surroundings construction sand order delivery</title>
+
+    <!-- font awesome cdn file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="styletrail.css">
+    
+    
+
+
+
+</head>
+<body>
+<!-- header section starts  -->
+
+<header>
+
+<a href="#" class="logo">construction sand  <span>.</span></a>
+
+<nav class="navbar">
+    <ul>
+        <li><a data-scroll="home" href="#home" class="active">home</a></li>
+        <li><a data-scroll="feature" href="#feature">feature</a></li>
+        <li><a data-scroll="about" href="#about">about</a></li>
+        <li><a data-scroll="gallery" href="#gallery">gallery</a></li>
+        <li><a data-scroll="review" href="#review">review</a></li>
+        <li><a data-scroll="contact" href="#contact">contact</a></li>
+        <li><a onclick="jai1()">Signup</a></li>
+        
+    </ul>
+</nav>
+
+<div class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+<div class="video">
+    <video src="images/video.webm" loop muted autoplay></video>
+</div>
+
+<div class="content">
+    <h1>near to omalur,salem,TN<br> construction sand .</h1>
+    <p>NOTE:all type construction sand available (msnad,psand,river sand).salem surroundings construction sand order delivery </p>
+</div>
+
+<div class="form-container">
+    <form action="">
+
+        <h3>find the cost</h3>
+
+        <span>location</span>
+        <input type="text" placeholder="place you want to visit">
+
+        <span>number of unit</span>
+        <input type="number" placeholder="number of peoples">
+
+        
+
+        <span>delivery date</span>
+        <input type="date">
+
+        <input type="submit" value="search">
+
+    </form>
+</div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- feature section starts  -->
+
+<section class="feature" id="feature">
+
+<h1 class="heading"><span>t</span>ypes of<span> s</span>and</h1>
+
+<div class="card-container">
+
+    <div class="card">
+        <span class="discount">-35%</span>
+        <img src="images/msand.jfif" alt="">
+        <div class="content">
+            <h3 class="title">msand</h3>
+            <p>good quality of msand available </p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#"><button class="btn">check out!</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="discount">-45%</span>
+        <img src="images/psand.webp" alt="">
+        <div class="content">
+            <h3 class="title">psand</h3>
+            <p>good quality of psand available</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#"><button class="btn">check out!</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="discount">-45%</span>
+        <img src="images/sand.jfif" alt="">
+        <div class="content">
+            <h3 class="title">river sand</h3>
+            <p>good quality of river sand available</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#"><button class="btn">check out!</button></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+<div class="form2" id="form2" hidden>
+    <div class="form">
+      <div class="btnbox">
+        <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Login</button>
+          <button type="button" class="toggle-btn" onclick="signup()">Signup</button>
+      </div>
+    
+    <div class="form1">
+      
+      <div class="login" id="login">
+      <form name="lform"  action="indexpage.html" onsubmit="return login1()" method="post">
+        <label for="uname">Username</label><br>
+        <input type="text" placeholder="Username" name="uname"><br>
+        <label for="Password">Password</label><br>
+        <input type="password" placeholder="password" name="passwordq"><br>
+        <div style="display: flex;" class="forget">
+        <div>
+          <input type="checkbox" id="txtcheck" style="margin: auto;font-size: medium; width: 15px;">
+          <label style="font-size: 0.5em;">Remember me</label>
+        </div>
+        <a href="">Forget Password?</a>
+       </div>   
+        <label for="captcha" >Captcha</label><br>
+        <input type="text" >
+        <input type="submit" value="Login" class="btn">
+      </form>
+    </div>
+      <div class="signup" id="signup">
+      <form name="myform"  action="personalinfo.html" onsubmit="return validate()" method="post">
+        <label for="uname">Username</label><br>
+        <input type="text" placeholder="Username" name="uname"  ><br>
+        <label for="emailid">E-Mail Id</label><br>
+        <input type="email" placeholder="xyz@gmail.com" name="emailid"><br>
+        <label for="Password">Password</label><br>
+        <input type="password" placeholder="password" name="Password" ><br>
+        <label for="rePassword">Re-enter Password</label><br>
+        <input type="password" placeholder="Re-enter password" name="rePassword"><br>
+        <label for="mobileno">mobile No</label><br>
+        <input type="text" placeholder="+91 1234567890" pattern="+91 1234567890" name="mobileno"><br>
+        <label for="captcha" >Captcha</label><br>
+        <input type="text" ><br><br>
+        <input type="submit" value="Register" class="btn">
+      </form>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div> 
+  
+
+<!-- feature section ends -->
+
+<!-- about section starts  -->
+
+
+
+
+
+<!-- about section ends -->
+
+<!-- gallery section starts  -->
+
+<section id="gallery" class="gallery">
+
+<h1 class="heading"><span>g</span>allery</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="images/msand.jfif" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/psand.webp" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/sand.jfif" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    
+
+    
+
+    <div class="box">
+        <img src="images/sa.jfif" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- review section starts  -->
+
+
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section id="contact" class="contact">
+
+<h1 class="heading"><span>c</span>ontact <span>u</span>s</h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15625.019087824938!2d78.03420464254332!3d11.74709362388007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf9699fe94cd9%3A0xb5e67106b1e9c27f!2sOmalur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1695809060261!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0; outline:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+<div class="row">
+
+<div class="contact-info">
+
+    <div class="box">
+        <h3> <i class="fas fa-home"></i> address </h3>
+        <p>omalur,salem <br>
+        tamilnadu <br>
+        636455.</p>
+    </div>
+
+    <div class="box">
+        <h3> <i class="fas fa-envelope"></i> e-mail </h3>
+        <p>jaisurya2233@gmail.com</p>
+    </div>
+
+    <div class="box">
+        <h3> <i class="fas fa-phone"></i> Mobile phone </h3>
+        <p>+91 8870667180</p>
+    </div>
+
+</div>
+
+<div class="contact-form-container">
+
+    <form action="">
+
+        <h3>get in touch</h3>
+
+        <div class="inputBox">
+            <input type="text" placeholder="full name">
+            <input type="email" placeholder="e-mail">
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+
+        <input type="submit" value="message">
+
+    </form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- contact section ends -->
+
+<section class="newsletter">
+
+<h1>NOTE:salem surroundings construction sand order delivery</h1>
+
+<p>only surrounding from omalur and salem areas only delivery</p>
+
+<form action="">
+    <input type="email" placeholder="enter your email">
+    <input type="submit" value="sign up">
+</form>
+
+</section>
+
+<section class="footer">
+
+<h1 class="credit">created by <span>jaisurya</span> | all rights reserved.</h1>
+
+<div class="icons">
+    <a href="#" class="fab fa-facebook-f"></a>
+    <a href="#" class="fab fa-twitter"></a>
+    <a href="#" class="fab fa-instagram"></a>
+    <a href="#" class="fab fa-github"></a>
+</div>
+
+</section>
+
+
+
+
+<!-- jquery cdn link  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="main.js"></script>
+<script src="script.js"></script>
+
+
+    
+</body>
+</html>
