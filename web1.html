@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      
+    }
+    .metric-chart {
+      margin-bottom: 20px;
+    }
+    .course-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .course-card img {
+      width: 100px;
+      height: auto;
+      margin-right: 10px;
+    }
+    .rate-chart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .rate-chart .chart {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .job-description {
+      margin-top: 20px;
+    }
+    #demo{
+      background-color: lightblue;
+      border-radius:20px;
+    }
+
+  </style>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Sales Dashboard</h1>
+    <p id="datePlaceholder">Salesperson: John Doe | Date: <span id="currentDate"></span></p>
+  </header>
+
+
+
+
+  <section >
+    <h2>Individual Performance Metrics</h2>
+<canvas id="myBarChart" width="100px" height="100px"></canvas>
+    <div class="metric-chart">Payments Received: [Bar Chart]</div>
+    <div class="metric-chart">Pre-Registrations Received: [Bar Chart]</div>
+    <div class="metric-chart">Links Shared: [Bar Chart]</div>
+    <!-- Add more metric charts as needed -->
+  </section>
+
+  <section >
+    <h2>Course Card</h2>
+    <div class="course-card" id="demo">
+      <div>
+        <h3>Most Sold Courses</h3>
+        <!-- Add course metrics with visual representation -->
+      </div>
+      <div>
+        <h3>Least Sold Courses</h3>
+        <!-- Add course metrics with visual representation -->
+      </div>
+    </div>
+  </section>
+
+  <section >
+    <h2>Rates</h2>
+    
+<canvas id="myPieChart" width="50px" height="100px"></canvas>
+     
+  
+    <div  id="demo">
+      <div class="chart">Average Order Size: [Value]</div>
+      <div class="chart">Weighted Value: [Value]</div>
+      <div class="chart">Sales Estimation: [Value]</div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>Job Description Integration</h2>
+    <p>Collaborative Elements: [Description]</p>
+    <p>Iterative Design Process: [Description]</p>
+    <p>Consistent Design Language: [Description]</p>
+  </section>
+
+
+  <script>
+    // Data for the bar chart
+    const datas = {
+      labels: ['Payments Received', 'Pre-Registrations Received', 'Links Shared', 'April', 'May'],
+      datasets: [{
+        label: 'Revenue',
+        data: [10000, 15000, 12000, 18000, 20000], // Example data values
+        backgroundColor: '#4682b4' // Bar color
+      }]
+    };
+
+    // Configuration for the bar chart
+    const configs = {
+      type: 'bar',
+      data: data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true // Start y-axis at zero
+          }
+        }
+      }
+    };
+
+    // Create the bar chart
+    var myBarChart = new Chart(
+      document.getElementById('myBarChart'),
+      configs
+    );
+  </script>
+   
+
+  <script>
+    // Data for the pie chart
+    const data = {
+      labels: ['Win Rates', 'Lost Deals', 'sales', 'revenue', 'feed backrate'],
+      datasets: [{
+        data: [10, 20, 30, 15, 25], // Example data values
+        backgroundColor: ['#ff6347', '#4682b4', '#2e8b57', '#ffa500', '#9370db']
+      }]
+    };
+
+    // Configuration for the pie chart
+    const config = {
+      type: 'pie',
+      data: data
+    };
+
+    // Create the pie chart
+    var myPieChart = new Chart(
+      document.getElementById('myPieChart'),
+      config
+    );
+  </script>
+    <script>
+    // JavaScript code to insert current date
+    const currentDateElement = document.getElementById("currentDate");
+    const date = new Date();
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    currentDateElement.textContent = date.toLocaleDateString("en-US", options);
+  </script>
+</body>
+</html>
