@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales Dashboard</title>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -51,6 +52,10 @@
       background-color: lightblue;
       border-radius:20px;
     }
+.chart-container {
+      width: 50%;
+      margin: auto;
+    }
 
   </style>
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -64,14 +69,7 @@
 
 
 
-  <section >
-    <h2>Individual Performance Metrics</h2>
-<canvas id="myBarChart" width="100px" height="100px"></canvas>
-    <div class="metric-chart">Payments Received: [Bar Chart]</div>
-    <div class="metric-chart">Pre-Registrations Received: [Bar Chart]</div>
-    <div class="metric-chart">Links Shared: [Bar Chart]</div>
-    <!-- Add more metric charts as needed -->
-  </section>
+  
 
   <section >
     <h2>Course Card</h2>
@@ -86,20 +84,72 @@
       </div>
     </div>
   </section>
+<div display="flex">
+<div width="100px">
 
-  <section >
-    <h2>Rates</h2>
-    
-<canvas id="myPieChart" width="50px" height="100px"></canvas>
-     
-  
-    <div  id="demo">
-      <div class="chart">Average Order Size: [Value]</div>
-      <div class="chart">Weighted Value: [Value]</div>
-      <div class="chart">Sales Estimation: [Value]</div>
-    </div>
-  </section>
+    <h2>Individual Performance Metrics</h2>
+ <h1>Sales Report</h1>
 
+  <div class="chart-container">
+    <canvas id="pie-chart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <canvas id="bar-chart"></canvas>
+  </div>
+
+  <script>
+    // Sample sales data
+    const salesData = {
+      labels: ['Product A', 'Product B', 'Product C', 'Product D'],
+      revenue: [5000, 3000, 6000, 4000],
+      unitsSold: [100, 70, 120, 80]
+    };
+
+    // Pie chart
+    const pieCtx = document.getElementById('pie-chart').getContext('2d');
+    const pieChart = new Chart(pieCtx, {
+      type: 'pie',
+      data: {
+        labels: salesData.labels,
+        datasets: [{
+          label: 'Revenue',
+          data: salesData.revenue,
+          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+    // Bar chart
+    const barCtx = document.getElementById('bar-chart').getContext('2d');
+    const barChart = new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: salesData.labels,
+        datasets: [{
+          label: 'Units Sold',
+          data: salesData.unitsSold,
+          backgroundColor: '#36a2eb',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
   <section id="demo">
     <h2>Job Description Integration</h2>
     <p>Collaborative Elements: [Description]</p>
@@ -114,15 +164,15 @@
       labels: ['Payments Received', 'Pre-Registrations Received', 'Links Shared', 'April', 'May'],
       datasets: [{
         label: 'Revenue',
-        data: [10000, 15000, 12000, 18000, 20000], // Example data values
-        backgroundColor: '#4682b4' // Bar color
+        datas: [10000, 15000, 12000, 18000, 20000], // Example data values
+        backgroundColor:  ['#ff6347', '#4682b4', '#2e8b57', '#ffa500', '#9370db'] // Bar color
       }]
     };
 
     // Configuration for the bar chart
     const configs = {
       type: 'bar',
-      data: data,
+      datas: datas,
       options: {
         scales: {
           y: {
