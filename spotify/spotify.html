@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>spotify</title>
+        <link rel="stylesheet" href="spotify.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">                      
+    
+    </head>
+    <body>
+        <div class="header">
+            <div  style="display: flex;">
+                 <img src="log.png" style="width:50px; height:50px;">
+                <p>Spotify</p>
+            </div>
+            <div style=" padding: 10px 50px; justify-content: space-between;">
+                <a href="#">Home</a>
+                <a href="#">Login</a>
+                <a href="#">About</a>
+                <a href="#">List</a>
+            </div>
+           
+        </div>
+        
+        <div class="container">
+            <input type="text"  id="search" placeholder="songName">
+            
+            <button onclick="play()" style="background-color: aquamarine;border-radius: 5px;">play</button>
+            <input type="file"  id="adding" placeholder="song input">
+            <input type="button" value="ADD" onclick="add()" style="background-color: aquamarine;border-radius: 5px; width:50px">
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span class="timesstamp"> 05:34
+                <i class="fa songitemplay fa-play" id="1" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span class="timesstamp"> 05:34
+                <i class="fa songitemplay fa-play" id="2" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span class="timesstamp"> 05:34
+                <i class="fa songitemplay fa-play" id="3" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span class="timesstamp"> 05:34
+                <i class="fa songitemplay fa-play" id="4" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span class="timesstamp"> 05:34
+                <i class="fa songitemplay fa-play" id="5" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span > 05:34
+                <i class="fa songitemplay fa-play" id="6" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span > 05:34
+                <i class="fa songitemplay fa-play" id="7" ></i></span>
+            </div>
+            <div class="songslist">
+                <label class="songName">Jujubee</label><span > 05:34
+                <i class="fa songitemplay fa-play" id="8" ></i></span>
+            </div>
+            <div class="control">
+                <input type="range" id="myprogressbar"  min="0" value="0" max="100" >
+                
+                <img src="play.gif" id="gif" style="width:90px;height: 30px;opacity: 0;">
+                <div class="icon">
+                <i class="fa fa-step-backward"  id="previous"></i>
+                <i class="fa fa-play" id="play"></i>
+                <i class="fa fa-step-forward" id="next"></i>
+            
+            </div>
+            </div>
+            
+        </div>
+        
+            
+        <script src="spotify.js"></script>
+    </body>
+</html>
